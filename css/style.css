@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+.header {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 2rem;
+}
+.search {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.search__input {
+    width: 40%;
+    height: 3rem;
+    margin-top: 1rem;
+    padding: 0 1rem;
+    outline: none;
+    border: 1px solid #bbbbbb;
+    border-radius: .5rem;
+}
+
+.btn {
+    width: 8rem;
+    height: 3rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    border: none;
+}
+
+.main {
+    height: 100%;
+}
+.cards {
+    width: 90%;
+    max-width: 75rem;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.card {
+    width: 16rem;
+    padding: 1rem;
+    border-radius: .4rem;
+    background: #f2f2f2;
+    cursor: pointer;
+    transition: transform ease-in-out .2s;
+}
+
+.card.ocultar {
+    display: none;
+}
+
+.card:hover {
+    transform: translateY( -.5rem );
+}
+
+.card__img {
+    width: 100%;
+}
+
+.card__img > img {
+    width: 80%;
+    height: 12.5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.card__name {
+    margin-top: 1.2rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.card__types {
+    width: 100%;
+    height: auto;
+    margin-top: .5rem;
+    font-size: .9rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: .3rem;
+    text-align: center;
+}
+
+.card__type {
+    display: block;
+    width: 6.7rem;
+    padding: .5rem;
+    border-radius: .2rem;
+    background: #fff;
+}
