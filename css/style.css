@@ -198,8 +198,8 @@
     display: none;
 }
 
-@media ( width <= 768px ) {
 
+@media ( width <= 400px ) { 
     .header {
         font-size: 1.5rem;
     }
@@ -214,22 +214,27 @@
 
     .cards {
         justify-content: center;
-        row-gap: 2rem;
-        padding: 0 .5rem;
+        gap: 1rem;
+        padding: 0 .2rem;
     }
 
     .card {
         width: 45%;
-        max-width: 16rem;
+        padding: 1rem .5rem;
     }
 
     .card__name {
-        margin-top: .8rem;
-        font-size: 1.1rem;
-    }    
+        margin-top: 0rem;
+        font-size: 1rem;
+    }  
     
+    .card__img > img {
+        width: 80%;
+    }
+
     .card__type {
-        width: 4.5rem;
+        width: 4rem;
+        font-size: .8rem;
         padding: .5rem;
     }
 
@@ -247,6 +252,67 @@
 
     .filter-media {
         width: 100%;
+        display: block;
+    }
+
+}
+
+
+@media  ( 401px <= width  <= 768px ) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+    .search {
+        width: 90%;
+    }
+    
+    .search__input {
+        width: 95%;
+        height: 2.5rem;
+    }
+
+    .cards {
+        justify-content: center;
+        gap: 1rem;
+        padding: 0 .2rem;
+    }
+
+    .card {
+        width: 45%;
+        max-width: 16rem;
+    }
+
+    .card__name {
+        margin-top: .8rem;
+        font-size: 1.1rem;
+    }  
+    
+    .card__img > img {
+        width: 90%;
+    }
+    
+    .card__type {
+        width: 45%;
+        padding: .5rem;
+    }
+
+    .filter__title, .types {
+        display: none;
+    }
+
+    .filter {
+        padding: 0 1rem 1rem;
+    }
+
+    .filter-media__label {
+        display: inline-block;
+    }
+
+    .filter-media {
+        width: 100%;
+        max-width: 32.8rem;
+        margin: 0 auto;
         display: block;
     }
 

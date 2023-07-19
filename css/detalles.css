@@ -11,13 +11,12 @@
 .render {
     position: absolute;
     top: 50%;
+    left: 2%;
     transform: translateY( -50% );
-    border: 1px solid #222;
     border-radius: .3rem;
-    margin-left: 1rem;
     padding: .5rem;
     cursor: pointer;
-    font-size: .9rem;
+    font-size: 1.5rem;
 }
 
 .card {
@@ -26,4 +25,65 @@
 
 .card:hover {
     transform: translateY( 0 );
+}
+
+@media ( width <= 400px ) { 
+
+    .header {
+        font-size: 1rem;
+    }
+
+    .cards {
+        justify-content: start;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .card {
+        width: 45%;
+        padding: 1rem .5rem;
+    }
+
+    .card__name {
+        margin-top: 0;
+        font-size: 1rem;
+    }  
+    
+    .card__img > img {
+        width: 80%;
+    }
+
+    .card__type {
+        width: 3.5rem;
+        font-size: .8rem;
+        padding: .5rem;
+    }
+
+}
+
+@media ( 401px <= width <= 768px ) { 
+
+    .cards {
+        max-width: 95%;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+
+    .card {
+        width: 45%;
+        max-width: 16rem;
+        padding: 1rem .5rem;
+    }
+
+    .card__name {
+        margin-top: 0;
+        font-size: 1rem;
+    }  
+    
+    .card__img > img {
+        width: 80%;
+    }
+
 }
