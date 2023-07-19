@@ -18,10 +18,28 @@
             <input class="search__input" id="search" type="text" placeholder="Buscar por nombre">
         </div>
     </header>
-
     <main class="main">
-        <section class="cards" id="cards">
-        </section>
+        <div class="container">
+            <article class="filter">
+                <div class="filter-media">
+                    <label id="media_label" class="filter-media__label" for="filter">
+                        <input class="filter-media__input" type="checkbox" id="filter">
+                        Filtros
+                    </label>
+                </div>
+                <h3 class="filter__title">Types</h3>
+                <section class="types">
+                    <div class="type">
+                        <label id="mostrarTodos" class="type__label" for="verTodos">
+                            <input type="radio" id="verTodos" value="VerTodos" class="type__input" name="type"></input>
+                            ver todos
+                        </label>
+                    </div>
+                </section>
+            </article>
+            <section class="cards" id="cards"></section>
+            <section id="pagination" class="pagination"></section>
+        </div>
     </main>
     
 </body>

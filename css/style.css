@@ -18,6 +18,7 @@
 
 .search__input {
     width: 40%;
+    max-width: 30rem;
     height: 3rem;
     margin-top: 1rem;
     padding: 0 1rem;
@@ -36,29 +37,76 @@
 }
 
 .main {
-    height: 100%;
+    width: 100%;
+    
 }
+
+.filter {
+    width: 100%;
+    padding: 1rem;
+    position: relative;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.filter::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: .1rem;
+    background: rgb(212, 212, 212);
+}
+
+.types {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+    gap: .7rem;
+    font-size: .9rem;
+}
+
+.type__label {
+    display: block;
+    width: 6rem;
+    background: rgb(138, 196, 24);
+    padding: .5rem;
+    text-align: center;
+    border-radius: .2rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.type__input {
+    position: absolute;
+    z-index: -1;
+}
+.type__label.press {
+    background: rgb(185, 218, 119);
+}
+
 .cards {
-    width: 90%;
+    width: 100%;
     max-width: 75rem;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2rem 2.2rem;
     padding: 1rem;
 }
 
 .card {
-    width: 16rem;
+    width: 16.5rem;
     padding: 1rem;
     border-radius: .4rem;
     background: #f2f2f2;
     cursor: pointer;
     transition: transform ease-in-out .2s;
-}
-
-.card.ocultar {
-    display: none;
 }
 
 .card:hover {
@@ -70,7 +118,7 @@
 }
 
 .card__img > img {
-    width: 80%;
+    width: 70%;
     height: 12.5rem;
     display: block;
     margin: 0 auto;
@@ -89,14 +137,201 @@
     font-size: .9rem;
     display: flex;
     flex-wrap: wrap;
-    gap: .3rem;
+    gap: .5rem;
     text-align: center;
 }
 
 .card__type {
     display: block;
-    width: 6.7rem;
+    width: 5.5rem;
     padding: .5rem;
     border-radius: .2rem;
     background: #ffff00;
+}
+
+.pagination {
+    width: 100%;
+    padding: 1rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    column-gap: 2rem;
+}
+.pagination button {
+    width: 6rem;
+    padding: .5rem;
+    border: 1px solid #808080;
+    outline: none;
+    background: none;
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #f0f0f0;
+}
+
+
+.filter-media {
+    width: 90%;
+    margin: 0 auto;
+    height: 3rem;
+    display: grid;
+    place-content: center start;
+}
+
+.filter-media__label {
+    display: inline-block;
+    position: relative;
+    border: 1px solid #222;
+    border-radius: .2rem;
+    padding: .5rem 1rem;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.filter-media__input {
+    position: absolute;
+    z-index: -1;
+}
+
+.filter-media__label, .filter-media__input, .filter-media {
+    display: none;
+}
+
+@media ( width <= 768px ) {
+
+    .header {
+        font-size: 1.5rem;
+    }
+    .search {
+        width: 90%;
+    }
+    
+    .search__input {
+        width: 95%;
+        height: 2.5rem;
+    }
+
+    .cards {
+        justify-content: center;
+        row-gap: 2rem;
+        padding: 0 .5rem;
+    }
+
+    .card {
+        width: 45%;
+        max-width: 16rem;
+    }
+
+    .card__name {
+        margin-top: .8rem;
+        font-size: 1.1rem;
+    }    
+    
+    .card__type {
+        width: 4.5rem;
+        padding: .5rem;
+    }
+
+    .filter__title, .types {
+        display: none;
+    }
+
+    .filter {
+        padding: 0 1rem 1rem;
+    }
+
+    .filter-media__label {
+        display: inline-block;
+    }
+
+    .filter-media {
+        width: 100%;
+        display: block;
+    }
+
+}
+
+@media (  769px <= width <= 1064px ) {
+
+    .header {
+        font-size: 1.5rem;
+        padding-bottom: 0;
+    }
+    .search {
+        width: 90%;
+        text-align: center;
+    }
+    
+    .search__input {
+        width: 95%;
+        height: 2.5rem;
+    }
+
+    .container {
+        max-width: 56rem;
+        margin: 0 auto;
+        background: red;
+    }
+
+    .cards {
+        max-width: 55rem;
+        margin: 0 auto;
+        row-gap: 2rem;
+        padding: 0 .5rem;
+    }
+
+    .card {
+        width: 30%;
+        max-width: 16rem;
+    }
+
+    .filter__title, .types {
+        display: none;
+    }
+
+    .filter-media__label {
+        display: inline-block;
+    }
+
+    .filter-media {
+        display: block;
+        width: 100%;
+    }
+}
+
+
+@media (  1065px <= width <= 1200px ) {
+
+    .header {
+        font-size: 1.5rem;
+        padding-bottom: 0;
+    }
+    .search {
+        width: 90%;
+        text-align: center;
+    }
+    
+    .search__input {
+        width: 100%;
+    }
+
+    .container {
+        max-width: 70rem;
+        background: red;
+    }
+
+    .cards {
+        max-width: 68rem;
+        margin: 0 auto;
+        gap: 1.5rem;
+        padding: 0 .5rem;
+    }
+
+    .card {
+        width: 25%;
+        max-width: 15rem;
+    }
+
+
 }

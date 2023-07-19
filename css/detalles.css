@@ -1,0 +1,21 @@
+
+.header {
+    width: 100%;
+    position: relative;
+}
+
+.header__title {
+    text-align: center;
+}
+
+.render {
+    position: absolute;
+    top: 50%;
+    transform: translateY( -50% );
+    border: 1px solid #222;
+    border-radius: .3rem;
+    margin-left: 1rem;
+    padding: .5rem;
+    cursor: pointer;
+    font-size: .9rem;
+}
