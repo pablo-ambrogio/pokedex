@@ -271,7 +271,6 @@
     .container {
         max-width: 56rem;
         margin: 0 auto;
-        background: red;
     }
 
     .cards {
@@ -318,7 +317,6 @@
 
     .container {
         max-width: 70rem;
-        background: red;
     }
 
     .cards {
