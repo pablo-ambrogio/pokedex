@@ -258,7 +258,7 @@
 }
 
 
-@media  ( 401px <= width  <= 768px ) {
+@media  ( 401px <= width <= 768px ) {
 
     .header {
         font-size: 1.5rem;
